@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+echo "Starting Ion's compiler"
+xeo=`pwd`
+rm -rf out
+mkdir out
+user=`whoami`
+cd "/Users/$user/ion/ion-t"
+if python3 main.py $xeo/$1 -t python -o $xeo/out/out.py; then
+  cd $xeo
+  echo 'Ion to Python sucess'
+  echo 'running Python'
+  echo ''
+  python3 $xeo/out/out.py
+else
+  echo "Ion to Kotlin failure"
+fi
+cd $ipath

@@ -1,0 +1,6 @@
+for i 3
+  print i
+  for j 10
+    print j
+  end
+end

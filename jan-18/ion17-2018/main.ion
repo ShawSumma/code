@@ -1,0 +1,6 @@
+func(
+  six,
+  args(),
+  six()
+),
+six()

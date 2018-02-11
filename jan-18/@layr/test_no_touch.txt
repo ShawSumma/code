@@ -1,0 +1,21 @@
+jmp end 1
+_mod:
+mov _mod__1_1 $_mod__1
+div _mod__1_1 $_mod__2
+mov _mod__devs $_mod__1_1
+mul _mod__devs $_mod__2
+mov _mod__neg 0
+sub _mod__neg $_mod__devs
+add _mod__neg $_mod__1
+mov ret $_mod__neg
+ret
+
+_pow:
+mov ret $_pow__1
+sub _pow__2 1
+_pow__mul:
+mul ret $_pow__1
+sub _pow__2 1
+jmp _pow__mul $_pow__2
+ret
+end:

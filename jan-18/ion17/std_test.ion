@@ -1,0 +1,56 @@
+func(
+  test_pyexec,
+  args(),
+  pyexec('print(float(1))')
+),
+func(
+  test_pyexec_with_varriables,
+  args(),
+  set(x,2),
+  pyexec('print(x)')
+),
+func(
+  test_func_args,
+  args(a),
+  print(a)
+),
+func(
+  test_func_recursivly,
+  args(a),
+  if(
+    comp.l(a,10),
+    print(a),
+    test_func_recursivly(add(a,1)),
+  )
+),
+func(
+  test_pyeval,
+  args(a),
+  set(a,pyeval(add(
+        'float(',str(a),')'
+      )
+    )
+  ),
+  print(a)
+),
+func(
+  test_list,
+  args(),
+  set(a,list(8,10,12,14,16,18,20,22,24,26,28,30)),
+  print(int(list.index(a,30))),
+  print(list.len(a)),
+  print(int(list.tostr(list(round(1),round(3))))),
+  print(list.element(a,3)),
+),
+func(
+  test_math,
+  args(),
+  print(add(mod(2,5),sub(div(58,2),pow(mul(2,2),2))))
+),
+test_pyexec(),
+test_pyexec_with_varriables(),
+test_func_args(3),
+test_func_recursivly(4),
+test_pyeval('3+7'),
+test_list(),
+test_math(),

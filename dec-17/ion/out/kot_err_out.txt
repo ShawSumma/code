@@ -1,0 +1,8 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.intellij.util.text.StringFactory to constructor java.lang.String(char[],boolean)
+WARNING: Please consider reporting this to the maintainers of com.intellij.util.text.StringFactory
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+out/out.kt:8:5: error: too many arguments for public fun c(): Unit defined in root package in file out.kt
+  c(x)
+    ^

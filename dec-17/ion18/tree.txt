@@ -1,0 +1,1 @@
+[[{'type': 'name', 'raw data': 'if', 'line': 1}, {'type': 'name', 'raw data': 'x', 'line': 1}, {'type': 'op', 'raw data': '==', 'line': 1}, {'type': 'int', 'raw data': '2', 'line': 1}, {'type': 'braket', 'raw data': '{', 'line': 1, 'depth': 0}], [{'type': 'braket', 'raw data': '}', 'line': 2, 'back': 5, 'depth': 0}]]

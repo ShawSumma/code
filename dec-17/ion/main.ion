@@ -1,0 +1,5 @@
+def c(int x){
+  print(100)
+}
+int x = 2
+c(x)

@@ -1,0 +1,27 @@
+i: 3
+call i_0
+halt
+
+func i_0
+	i:i-1
+	switch i
+		state 0.0
+
+			ret 0
+		state 2
+			j: 10
+			call j_1
+			call i_0
+		end
+	end
+
+func j_1
+	j:j-1
+	switch j
+		state 0.0
+			ret 0
+		state *
+			print j
+			call j_1
+		end
+	end

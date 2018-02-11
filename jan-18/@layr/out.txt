@@ -1,0 +1,5 @@
+mov _lis $lis
+jmp _end_ten-is-false 1
+mov _temp_out 100
+* _temp_out
+_end_ten-is-false:

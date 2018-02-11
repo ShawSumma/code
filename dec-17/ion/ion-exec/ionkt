@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+echo "Starting Ion's compiler"
+xeo=`pwd`
+rm -rf out
+mkdir out
+user=`whoami`
+cd "/Users/$user/ion/ion-t"
+if python3 main.py $xeo/$1 -t kotlin -o $xeo/out/out.kt; then
+  cd $xeo
+  echo 'Ion to Kotlin sucess'
+  if kotlinc $xeo/out/out.kt -include-runtime -d $xeo/out/out.jar > $xeo/out/kot_err_out.txt 2>&1; then
+    echo 'Kotlin to Java sucess'
+    echo 'Running Java'
+    echo ''
+    java -jar out/out.jar
+  else
+    echo 'Kotlin to Java failure'
+  fi
+else
+  echo "Ion to Kotlin failure"
+fi
+cd $ipath
